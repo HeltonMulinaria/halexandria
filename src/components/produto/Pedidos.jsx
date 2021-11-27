@@ -1,6 +1,7 @@
 import {useState , useEffect} from "react";
 import Api from "../api/Api";
 import ItemPedido from "./ItemPedido";
+import MenuTopo from "../menu/MenuTopo";
 
 function Pedidos() {
     const [pedidos , setPedidos] = useState([]);
@@ -16,6 +17,7 @@ function Pedidos() {
 
     return (
         <>
+         <MenuTopo></MenuTopo>
         {pedidos.map((pedido) => (
 
             <div key = {pedido.id}>
