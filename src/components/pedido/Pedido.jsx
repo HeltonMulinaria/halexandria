@@ -1,24 +1,25 @@
 import React from "react";
+import { Component } from "react";
 import Api from "../api/Api";
-import { useParams } from "react-router-dom";
 
-function Pedido() {
-  const { id } = useParams();
-  const [pedido, setPedido] = React.useState({});
-// eslint-disable-next-line
-  React.useEffect(consultar, []);
-
-  function consultar() {
-    const exibir = (res) => setPedido(res.data);
-    Api.get(`/pedido/${id}`).then(exibir);
+class Product extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      quantidade:0
+    };    
   }
-  return(
-    <>
-    <h1> Meu Pedido</h1>
-    <p>{id}</p>
-    <p>Cliente: {pedido.id}</p>
-    </>
-  );
+
+  add(){
+    
+  this.setState({
+    quantidade: this.state.quantidade + 1
+  });
+
 }
+
+}
+
+
 
 export default Pedido;

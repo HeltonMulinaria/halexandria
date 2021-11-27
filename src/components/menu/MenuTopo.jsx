@@ -11,7 +11,7 @@ function MenuTopo() {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-          <Link to="/pedidos">Meus Pedidos</Link>          
+          <Link to="/pedido">Meus Pedidos</Link>          
           </Navbar.Text>         
         </Navbar.Collapse>
       </Container>
