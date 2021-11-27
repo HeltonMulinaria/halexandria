@@ -1,12 +1,13 @@
-import { Container } from "react-bootstrap";
-import { Col } from "react-bootstrap";
-import { Row } from "react-bootstrap";
-import MenuTopo from "../menu/MenuTopo";
-import { Card } from "react-bootstrap";
-import React, { useState, useEffect } from "react";
 import Api from "../api/Api";
+import React, { useState, useEffect } from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import MenuTopo from "../menu/MenuTopo";
+import Form from "react-bootstrap/Form";
 import { useParams } from "react-router";
-
+import "./produtoDetalheStyle.css";
 function ProdutoDetalhe() {
   const [produto, setProduto] = useState([]);
 
@@ -23,27 +24,33 @@ function ProdutoDetalhe() {
 
   return (
     <>
-      <Container fluid>
-        <MenuTopo></MenuTopo>
-        <Row>
+      <MenuTopo></MenuTopo>
+      <Container  style={{  marginTop:"50px" }} fluid >
+        <Row >
           <Col>
             <div className="container">
-              <Card style={{ width: "40rem" }}>
-                <h1>Listar pedidos </h1>
-                {console.log(produto)}
-                <li key={produto.id}>
-                  <Card.Body>
-                    <Card.Title>{produto.nome}</Card.Title>
-                    <Card.Text>
-                    <img src={produto.fotoLink} alt="" className='imagemProduto' />
-                    </Card.Text>                   
-                  </Card.Body>
+              <div classname="card">
+              <img src={produto.fotoLink} alt="" className="imagemProduto" />
+              {console.log(produto)}
+              <li key={produto.id}>
+                <h2>{produto.produto}</h2>
+                <p>{produto.descricao}</p>
+                <p>R$ {produto.valor} </p>
 
-                  
-                </li>
-              </Card>
+                <Form>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="formBasicQuantidade"                  >
+                    <Form.Label>Quantidade</Form.Label>
+                    <Form.Control type="number" />
+                  </Form.Group>
+                  <Button variant="primary" type="submit" className="btnAdicionarAoCarrinho">
+                       Adicionar ao Carrinho
+                  </Button>
+                </Form>
+              </li>
             </div>
-            )
+            </div>
           </Col>
         </Row>
       </Container>

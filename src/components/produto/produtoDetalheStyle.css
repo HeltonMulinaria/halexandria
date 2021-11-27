@@ -1,31 +1,21 @@
-
-.menu-topo{
-    width: 100%;
-    
-}
-.container{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content:   space-evenly ;
-    align-items: center;
-    align-content: space-evenly;
-   
-   
-    
-    
-}
-.container li{
-    list-style: none;
-   
+.menu-topo {
+  width: 100%;
 }
 
-.imagemProduto{
-   min-height: 200px;
-   max-height: 200px;
-   
-;
+.container {
+  display: flex;
+  justify-content: center; 
+
 }
-.btnNovoProduto{
-    margin-bottom: 30px;
+.container li {
+  list-style: none;
 }
+.container a {
+  text-decoration: none;
+  color: white;
+}
+.container a:hover {
+  color: burlywood;
+}
+
 

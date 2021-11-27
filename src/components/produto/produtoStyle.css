@@ -1,31 +1,21 @@
-
-.menu-topo{
-    width: 100%;
-    
+.menu-topo {
+  width: 100%;
 }
-.container{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content:   space-evenly ;
-    align-items: center;
-    align-content: space-evenly;
-   
-   
-    
-    
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  align-content: space-evenly;
 }
-.container li{
-    list-style: none;
-   
+.container li {
+  list-style: none;
 }
 
-.imagemProduto{
-   min-height: 200px;
-   max-height: 200px;
-   
-;
+.imagemProduto {
+  min-height: 200px;
+  max-height: 200px;
 }
-.btnNovoProduto{
-    margin-bottom: 30px;
+.btnNovoProduto {
+  margin-bottom: 30px;
 }
-

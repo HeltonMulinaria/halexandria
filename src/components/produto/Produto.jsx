@@ -23,13 +23,13 @@ class Produto extends Component {
       <>
       <MenuTopo></MenuTopo>
        
-      <h1>Produtos </h1>
+    
       <div className="container">
        
         {console.log(nome)}
         {nome.map((nome) => (
           <li key={nome.id} className="lista-de-produtos">
-            <Card style={{ width: "19rem" }} >
+            <Card style={{ width: "19rem", margin:"20px" }} >
               <Card.Img variant="top" src={nome.fotoLink}className="imagemProduto" />
               <Card.Body>
                 <Card.Title>{nome.nome}</Card.Title>
